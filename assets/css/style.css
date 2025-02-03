@@ -54,11 +54,11 @@ img{
     background-attachment: fixed;
   }
   @media (max-width: 1024px){
-    background-image: url(../images/banner-tablet.jpg);
+    background-image: url(../images/banner.jpg);
     padding: 120px 0 100px;
   }
   @media (max-width: 767px){
-    background-image: url(../images/banner-mobile.jpg);
+    background-image: url(../images/banner.jpg);
     padding: 120px 0 60px;
   }
   .banner-in{
