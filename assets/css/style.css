@@ -2,16 +2,17 @@
   --font-kanit: "Kanit", sans-serif;
   --font-basker: "Baskervville", serif;
   --font-lavvic: "Livvic", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 
-  --color-primary: #d18d50;
-  --color-secondary: #96623b;
+  --color-primary: #3d4928;
+  --color-secondary: #3d4928;
 
   --container: 1140px;
 }
 
 body{
   margin: 0;
-  font-family: var(--font-basker);
+  font-family: var(--font-poppins);
   font-size: 1rem;
   line-height: 1.2;
   font-weight: 400;
@@ -44,22 +45,33 @@ img{
 
 .section-banner{
   background-image: url(../images/banner.jpg);
-  /* background-position: center center; */
-  background-position: bottom -75% center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
   transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
-  padding: 270px 0 240px;
+  height: 100vh;
   @media (min-width: 1025px){
     background-attachment: fixed;
   }
   @media (max-width: 1024px){
     background-image: url(../images/banner.jpg);
-    padding: 120px 0 100px;
   }
   @media (max-width: 767px){
     background-image: url(../images/banner.jpg);
-    padding: 120px 0 60px;
+    height: 640px;
+  }
+  .container{
+    height: 100%;
+  }
+  .flex-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @media (max-width: 767px){
+      justify-content: flex-start;
+    }
   }
   .banner-in{
     display: flex;
@@ -68,25 +80,31 @@ img{
     justify-content: center;
     color: #fff;
     padding-top: 160px;
+    @media (max-width: 767px){
+      padding-top: 75px;
+      margin-bottom: 20px;
+    }
     h1{
       font-size: 56px;
       letter-spacing: 7.8px;
-      margin-bottom: 20px;
-      text-shadow: 7px 3px 3px rgba(0,0,0, 0.40);
+      margin-bottom: 10px;
+      text-shadow: 3px 0px 3px rgb(0 0 0 / 80%);
       @media (max-width: 1024px){
         font-size: 46px;
       }
       @media (max-width: 767px){
-        font-size: 33px;
+        font-size: 40px;
         line-height: 1em;
+        margin-bottom: 10px;
       }
     }
     h3{
-      font-size: 21px;
+      font-size: 20px;
       letter-spacing: 5.7px;
-      text-shadow: 7px 3px 3px rgba(0,0,0, 0.40);
+      text-shadow: 3px 0px 3px rgb(0 0 0 / 80%);
+      font-weight: 600;
       @media (max-width: 1024px){
-        font-size: 17px;
+        font-size: 16px;
       }
     }
   }
@@ -109,16 +127,23 @@ img{
           margin-right: 15px;
           margin-left: 15px;
           padding: 20px;
-          text-shadow: 7px 3px 3px rgba(0,0,0, 0.40);
+          text-shadow: 3px 0px 3px rgb(0 0 0 / 80%);
           .number-countdown{
-            font-size: 60px;
+            font-size: 50px;
             display: block;
+            font-weight: 700;
+            @media (max-width: 767px){
+              font-size: 38px;
+            }
           }
           .label-countdown{
             font-size: 18px;
             display: block;
-            text-shadow: 7px 3px 3px rgba(0,0,0, 0.40);
+            text-shadow: 3px 0px 3px rgb(0 0 0 / 80%);
             font-weight: 600;
+            @media (max-width: 767px){
+              font-size: 14px;
+            }
           }
         }
       }
@@ -170,7 +195,6 @@ img{
         font-style: italic;
         word-spacing: 4px;
         color: var(--color-primary);
-        font-family: var(--font-lavvic);
         margin: 0 10px;
       }
     }
@@ -189,6 +213,7 @@ img{
     .img-schedule{
       img{
         vertical-align: middle;
+        height: 100%;
       }
     }
   }
@@ -261,6 +286,10 @@ img{
     animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
     height: 51.59px;
     margin-bottom: 40px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      height: 25px
+    }
   }
   @keyframes typing {
     from { width: 0 }
@@ -290,7 +319,6 @@ img{
       }
       p{
         font-size: 19px;
-        font-family: var(--font-kanit);
         margin-bottom: 40px;
       }
       .btn-when{
@@ -341,12 +369,10 @@ img{
   h2{
     font-size: 2rem;
     font-weight: 500;
-    font-family: var(--font-kanit);
     color: var(--color-primary);
     margin-bottom: 5px;
   }
   p{
-    font-family: var(--font-kanit);
     color: var(--color-primary);
   }
 }
