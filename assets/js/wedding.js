@@ -8,7 +8,7 @@ document.querySelector(".btn-wish").addEventListener("click", function () {
   }
 
   fetch(
-    "https://script.google.com/macros/s/AKfycby3e5kOeR2fWJ6mHxJ8bwH8bDRjqJtKuhHIO1or7-sC73KUvsho9u0L1eePj6ILXwv9Nw/exec",
+    "https://script.google.com/macros/s/AKfycby-as4uRlkVM5YVCUab7u3l1uIGLKYvwPuw9O8XesBtE2J9A2Uh4FJEvAzTZmZbZK3TWg/exec",
     {
       method: "POST",
       headers: {
